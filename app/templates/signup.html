@@ -25,7 +25,7 @@
             <div class="form signup">
                 <span class="title">Registration</span>
 
-                <form action="/signup" method="post">
+                <form action="/signup.html" method="post">
                     {% csrf_token %}
                     <div class="input-field">
                         <input type="text" placeholder="Enter your First Name" name="fname" required>
@@ -36,11 +36,11 @@
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" class="password" placeholder="Create a Username" name="username" required>
+                        <input type="password" class="password" placeholder="Create a password" name="spass" id = "ida" onkeyup="check();" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Create a Password" name="password" required>
+                        <input type="password" class="password" placeholder="Confirm password" name="sconfirm" id = "idb" onkeyup="check();" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -67,4 +67,18 @@
         </div>
     </div>
 </body>
+<script>
+
+    var check = function() {
+        if (document.getElementById('ida').value ==
+          document.getElementById('idb').value) {
+           
+          document.getElementById('alert').innerHTML = '';
+        } else {
+            
+          document.getElementById('alert').innerHTML = 'Passwords donot match';
+        }
+      }
+</script>
+
 </html>

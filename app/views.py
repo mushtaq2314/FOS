@@ -25,9 +25,9 @@ def signupUser(request):
         fname= request.POST.get('fname')
         lname= request.POST.get('lname')
         uname= request.POST.get('username')
-        email= request.POST.get('email')
+        # email= request.POST.get('email')
         pwd= request.POST.get('password')
-        user=User.objects.create_user(username=uname,email=email,password=pwd)
+        user=User.objects.create_user(username=uname,password=pwd)
         user.first_name=fname
         user.last_name=lname
         user.save()
