@@ -28,19 +28,19 @@
                 <form action="/signup.html" method="post">
                     {% csrf_token %}
                     <div class="input-field">
-                        <input type="text" placeholder="Enter your First Name" name="sname" required>
+                        <input type="text" placeholder="Enter your First Name" name="fname" required>
                         <i class="uil uil-user"></i>
                     </div>
                     <div class="input-field">
-                        <input type="text" id="idc" placeholder="Enter your Last Name" name="smail" onkeyup="ValidateEmail();" required>
+                        <input type="text" id="idc" placeholder="Enter your Last Name" name="lname" onkeyup="ValidateEmail();" required>
                         <i class="uil uil-envelope icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Create a password" name="spass" id = "ida" onkeyup="check();" required>
+                        <input type="password" class="password" placeholder="Create a Username" name="username" required>
                         <i class="uil uil-lock icon"></i>
                     </div>
                     <div class="input-field">
-                        <input type="password" class="password" placeholder="Confirm password" name="sconfirm" id = "idb" onkeyup="check();" required>
+                        <input type="password" class="password" placeholder="Create a Password" name="password" required>
                         <i class="uil uil-lock icon"></i>
                         <i class="uil uil-eye-slash showHidePw"></i>
                     </div>
@@ -67,18 +67,4 @@
         </div>
     </div>
 </body>
-<script>
-
-    var check = function() {
-        if (document.getElementById('ida').value ==
-          document.getElementById('idb').value) {
-           
-          document.getElementById('alert').innerHTML = '';
-        } else {
-            
-          document.getElementById('alert').innerHTML = 'Passwords donot match';
-        }
-      }
-</script>
-
 </html>
