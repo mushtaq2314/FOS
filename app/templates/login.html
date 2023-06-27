@@ -13,7 +13,7 @@
 <body>
 	<selection>
 		<header>
-			<a href="#"><img src="static/logo1.png" class="logo" onclick="location.replace('index.html');"></a>
+			<a href="#"><img src="static/logo1.png" class="logo" onclick="location.replace('index.html');" width="200px"></a>
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Our Services</a></li>
@@ -29,7 +29,7 @@
             <div class="form login">
                 <span class="title">Login</span>
 
-                <form action="/login.html" method="post">
+                <form action="/login" method="post">
                     {% csrf_token %}
                     
                     <div class="input-field">
