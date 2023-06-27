@@ -11,11 +11,11 @@
 <body>
 	<selection>
 		<header>
-			<a href="#"><img src="static/test.png" class="logo" onclick="location.replace('index.html');"></a>
+			<a href="#"><img src="static/test.png" class="logo" onclick="location.replace('/');"></a>
 			<ul>
-				<li><a href="index.html">Home</a></li>
+				<li><a href="#">Home</a></li>
 				<li><a href="#">Our Services</a></li>
-				<li><a href="contact.html">Contact</a></li>
+				<li><a href="#">Contact</a></li>
 				<li><a onclick="window.location.reload();">Log In</a></li>
 			</ul>
 		</header>
@@ -50,7 +50,7 @@
                         <input type="button" value="Signup" >
                     </div> {% endcomment %}
 
-                    <button type="submit" class="input-field button" style="background-color:#ffc155;color:white;border:0px;border-radius:10px;font-size:18px;margin-top:-5px;">Signup</button>
+                    <button type="submit" class="input-field button" style="background-color:#cc3333;color:white;border:0px;border-radius:10px;font-size:18px;margin-top:-5px;">Signup</button>
                     <p><p id='alert' style="font-family:poppins;color:red;text-align:center;margin-top:15px;"></p></p>
                     
                 </form>
@@ -60,7 +60,7 @@
                 {%endif%}
                 <div class="login-signup" style="margin-top:5px;">
                     <span class="text" >Already a member?
-                        <a href="login.html" class="text login-link">Login Now</a>
+                        <a href="/login" class="text login-link">Login Now</a>
                     </span>
                 </div>
             </div>
