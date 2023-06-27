@@ -133,6 +133,7 @@ body{
 }
 #biryani,#paneer,#chicken,#vegetable,#chinese,#south-indian{
     margin-top: 40px;   
+    margin-left: 4%;
 }
 #paneer #item-card,#vegetable #item-card{
     background: rgb(218, 253, 188);
@@ -370,10 +371,10 @@ color: darkgrey;
     }
     #logo{
         width: 90px;
-        height: 70px;
+        height: 45px;
     }
     .logo-box .your-address{
-        font-size: 18px;
+        font-size: 14px;
         width: 150px;
         color: crimson;
         text-transform: capitalize;
