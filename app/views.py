@@ -8,15 +8,17 @@ def index(request):
 
 ######################################################################################
 #AUTHENTICATION
+global uname
 def loginUser(request):
     if(request.method=='POST'):
-        name = request.POST.get('username')
+        global uname
+        uname = request.POST.get('username')
         pwd = request.POST.get('password')
-        print(name,pwd)
-        user= authenticate(username=name,password=pwd)
+        print(uname,pwd)
+        user= authenticate(username=uname,password=pwd)
         if(user is not None):
             login(request,user)
-            return render(request,'dashboard.html',{'name':name})
+            return render(request,'dashboard.html',{'name':uname})
         else:
             return render(request,'login.html',{'msg':'Invalid Credentials!'})
     return render(request,'login.html')
@@ -41,22 +43,8 @@ def dashboard(request):
     print(request.user.is_anonymous)
     if(request.user.is_anonymous):
         return render(request,'login.html',{'msg':'Please login first!'})
-    return render(request,'dashboard.html')
+    global uname
+    name=uname
+    return render(request,'dashboard.html',{'name':name})
 
 
-
-# import itertools
-# def getValidPermutations(n):
-#     # Write your code here
-#     nums = list(range(1,n+1))
-#     l = list(itertools.permutations(nums))
-#     # print(l)
-#     s=0
-#     for permutation in l:
-#         num=0
-#         for i in range(len(permutation)):
-#             if((permutation[i]%(i+1)==0) or((i+1)%permutation[i]==0)):num+=1
-#         if(num==len(permutation)): s+=1  
-#     print(s)     
-#     return s    
-# getValidPermutations(15)
