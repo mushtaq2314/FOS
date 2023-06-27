@@ -97,7 +97,7 @@ section{
 }
 .home-text h1 span{
 	color: #cc3333;
-	text-decoration: underline;
+	text-decoration: none;
 }
 .home-text p{
 	color: #666;
