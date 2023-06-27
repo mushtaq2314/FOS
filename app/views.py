@@ -31,7 +31,7 @@ def signupUser(request):
         user.first_name=fname
         user.last_name=lname
         user.save()
-        return render(request,'dashboard.html',{'name':uname})
+        return redirect('/dashboard',{'name':uname})
     return render(request,'signup.html')
 def logoutUser(request):
     logout(request)
