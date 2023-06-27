@@ -13,7 +13,7 @@ selection{
 	display: flex;
 	justify-content: space-between;
 	align-content: center;
-	background: #eeeeee;
+	background: url(banner-bg.jpg);
 }
 header{
 	position: absolute;
@@ -97,7 +97,7 @@ header ul li a{
     bottom: 0;
     height: 3px;
     width: 30px;
-    background-color: #ffc155;
+    background-color: #cc3333;
     border-radius: 25px;
 }
 .form .input-field{
@@ -183,13 +183,13 @@ header ul li a{
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 6px;
-    background-color: #ffc155;
+    background-color: #cc3333;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 .button input:hover{
-    background-color: #f5b547;
+    background-color: #a12525;
 }
 
 .form .login-signup{
